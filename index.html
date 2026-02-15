@@ -1,17 +1,52 @@
-<div id="payment-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Payment Options</h2>
-    <h3>UPI Payment</h3>
-    <p>UPI ID: example@upi</p>
-    <img src="path/to/qr-code.png" alt="QR Code" />
-    <h3>Card Payment</h3>
-    <form>
-      <label for="card-number">Card Number:</label><br>
-      <input type="text" id="card-number" name="card-number"><br>
-      <label for="expiry-date">Expiry Date:</label><br>
-      <input type="text" id="expiry-date" name="expiry-date"><br>
-      <input type="submit" value="Pay Now">
-    </form>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Modal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Payment Modal</h2>
+            <form id="paymentForm">
+                <div class="payment-option">
+                    <h3>UPI ID</h3>
+                    <input type="text" placeholder="Enter UPI ID" required />
+                </div>
+                <div class="payment-option">
+                    <h3>QR Code</h3>
+                    <input type="file" accept="image/*" required />
+                    <p>Scan the QR code to make payment.</p>
+                </div>
+                <div class="payment-option">
+                    <h3>Card Details</h3>
+                    <input type="text" placeholder="Card Number" required />
+                    <input type="text" placeholder="Cardholder Name" required />
+                    <input type="text" placeholder="MM/YY" required />
+                    <input type="text" placeholder="CVV" required />
+                </div>
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("paymentModal");
+        const closeModal = document.getElementById("closeModal");
+        const paymentForm = document.getElementById("paymentForm");
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        paymentForm.onsubmit = function(event) {
+            event.preventDefault();
+            // Add form validation and payment processing logic here
+            alert('Payment submitted!');
+        }
+    </script>
+</body>
+</html>
