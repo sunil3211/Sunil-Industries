@@ -3,50 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Modal</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Sunil Industries</title>
 </head>
 <body>
-    <div class="modal" id="paymentModal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2>Payment Modal</h2>
-            <form id="paymentForm">
-                <div class="payment-option">
-                    <h3>UPI ID</h3>
-                    <input type="text" placeholder="Enter UPI ID" required />
-                </div>
-                <div class="payment-option">
-                    <h3>QR Code</h3>
-                    <input type="file" accept="image/*" required />
-                    <p>Scan the QR code to make payment.</p>
-                </div>
-                <div class="payment-option">
-                    <h3>Card Details</h3>
-                    <input type="text" placeholder="Card Number" required />
-                    <input type="text" placeholder="Cardholder Name" required />
-                    <input type="text" placeholder="MM/YY" required />
-                    <input type="text" placeholder="CVV" required />
-                </div>
-                <button type="submit">Pay Now</button>
-            </form>
-        </div>
-    </div>
-    <script>
-        const modal = document.getElementById("paymentModal");
-        const closeModal = document.getElementById("closeModal");
-        const paymentForm = document.getElementById("paymentForm");
-
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        paymentForm.onsubmit = function(event) {
-            event.preventDefault();
-            // Add form validation and payment processing logic here
-            alert('Payment submitted!');
-        }
-    </script>
+    <header>
+        <h1>Welcome to Sunil Industries</h1>
+    </header>
+    <main>
+        <p>Your content here.</p>
+        <!-- Payment modal features have been removed -->
+    </main>
+    <footer>
+        <p>&copy; 2026 Sunil Industries</p>
+    </footer>
 </body>
 </html>
